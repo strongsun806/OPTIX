@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OPTIX 데모 - 2D 시뮬레이션 프로토타입</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>OPTIX - 2D 시뮬레이션 데모</h1>
+    <p>샘플 창고 레이아웃에서 작업자(Agent)가 픽업 → 출고까지 이동하는 과정을 시뮬레이션합니다.</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label for="scenario">시나리오:</label>
+      <select id="scenario">
+        <option value="before">설비 도입 전 (기본)</option>
+        <option value="after">설비 도입 후 (통로 최적화)</option>
+      </select>
+
+      <button id="loadBtn">레이아웃 로드</button>
+      <button id="startBtn">시작</button>
+      <button id="pauseBtn">일시정지</button>
+      <label>속도:
+        <input id="speed" type="range" min="1" max="10" value="5">
+      </label>
+    </section>
+
+    <section class="canvas-wrap">
+      <canvas id="canvas" width="800" height="560"></canvas>
+    </section>
+
+    <section class="kpi">
+      <h2>KPI</h2>
+      <ul>
+        <li>총 이동거리: <span id="k_distance">0</span> m</li>
+        <li>총 처리시간: <span id="k_time">0</span> s</li>
+        <li>처리 건수: <span id="k_count">0</span></li>
+      </ul>
+      <h3>결과 비교</h3>
+      <div id="report"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>OPTIX Prototype · 데모용 (간략화된 모델)</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

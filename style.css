@@ -1,0 +1,12 @@
+
+*{box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
+body{margin:0;display:flex;flex-direction:column;min-height:100vh;background:#f6f8fa;color:#111}
+header{background:#0b5fff;color:white;padding:12px 20px}
+header h1{margin:0;font-size:20px}
+main{display:flex;gap:20px;padding:18px}
+.controls{width:260px;background:white;padding:12px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+.controls label, .controls button{display:block;margin:8px 0}
+.canvas-wrap{flex:1;background:white;padding:12px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.kpi{width:260px;background:white;padding:12px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+canvas{background:#e9eef7;border:1px solid #d6e0ff;display:block;margin:0 auto}
+footer{margin-top:auto;padding:10px;text-align:center;color:#666}
